@@ -19,6 +19,7 @@ blogSample.controller('photoController', function($scope, $route){
         }else {
             $scope.index = $scope.index+1;
         }
+        $scope.phoneText = "";
     }
     
     $scope.minusOne = function() {
@@ -27,6 +28,7 @@ blogSample.controller('photoController', function($scope, $route){
         }else {
             $scope.index = $scope.index-1;
         }
+        $scope.phoneText = "";
     }
     
     $scope.getText = function() {

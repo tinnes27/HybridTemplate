@@ -1,16 +1,21 @@
-<div class="row" style="margin-top: 120px; margin-bottom: 30px;">
+<div class="row" style="margin-top: 40px; margin-bottom: 30px;">
     <div class="col-xs-12">
-        <img class="img-responsive" src="img/ac_logo.png" style="margin-left: auto; margin-right: auto;"/>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12 text-center">
-Timothy Innes</br>
-<strong>Technology Development Program</strong></br>
-<strong>AT&amp;T Services Inc.</strong></br>
-e-mail: ti611h@att.com</br>
+        <img class="img-responsive" src="img/attlogo.svg" style="margin-left: auto; margin-right: auto; max-width: 200px;"/>
     </div>
 </div>
 <div class="col-xs-12">
     <a href="#/" class="btn btn-default center-block" style="color:#9743CC" role="button">Home</a>
+</div>
+<div class="row">
+    <div class="col-xs-12 text-center">
+<div>
+        <p class="text-center"><br/>Photo Gallery: The Visual History of the Telephone <br/></p>
+        <p class="text-center"> 
+            <img class="img-responsive" src="{{getImage()}}" style="margin-left: auto; margin-right: auto; max-height: 300px; min-height: 300px;"/>  <br/>
+             <button ng-click="addOne()" > + </button> <button ng-click="minusOne()" > - </button> <button ng-click="getText()" > info </button>
+        </p>
+        <p class="text-center">
+            {{phoneText}}
+        </p>
+    </div>
 </div>
