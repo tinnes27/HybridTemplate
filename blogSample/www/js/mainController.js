@@ -1,6 +1,13 @@
 blogSample.controller('mainController', function($scope, $route){
     $scope.latitude = blogSample.latitude;
     $scope.longitude = blogSample.longitude; 
+    
+    $scope.phoneText = "";
+    $scope.text0 = "This is the first phone";
+    $scope.text1 = "This is the second phone";
+    $scope.text2 = "This is the third phone";
+    $scope.text3 = "Here is another phone";
+    $scope.textArray = [$scope.text0, $scope.text1, $scope.text2, $scope.text3];
 
     $scope.index = 0;
     $scope.imageArray = ["img/image0.jpg", "img/image1.jpg", "img/image2.gif", "img/image3.jpg"];
@@ -14,7 +21,8 @@ blogSample.controller('mainController', function($scope, $route){
         }else {
             $scope.index = $scope.index+1;
         }
-    }
+        $scope.phoneText = "";
+    };
     
     $scope.minusOne = function() {
         if($scope.index-1 < 0) {
@@ -22,5 +30,10 @@ blogSample.controller('mainController', function($scope, $route){
         }else {
             $scope.index = $scope.index-1;
         }
-    }
+        $scope.phoneText = "";
+    };
+    
+     $scope.getText = function() {
+        $scope.phoneText = $scope.textArray[$scope.index];
+    };
 });

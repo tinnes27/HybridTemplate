@@ -2,6 +2,13 @@ blogSample.controller('photoController', function($scope, $route){
     $scope.currentImage = "hi";     
     $scope.index = 0;
     $scope.imageArray = ["img/image0.jpg", "img/image1.jpg", "img/image2.gif", "img/image3.jpg"];
+    $scope.phoneText = "";
+    $scope.text0 = "This is the first phone";
+    $scope.text1 = "This is the second phone";
+    $scope.text2 = "This is the third phone";
+    $scope.text3 = "Here is another phone";
+    $scope.textArray = [$scope.text0, $scope.text1, $scope.text2, $scope.text3];
+    
     $scope.getImage = function() {
         return $scope.imageArray[$scope.index];
     };
@@ -20,5 +27,9 @@ blogSample.controller('photoController', function($scope, $route){
         }else {
             $scope.index = $scope.index-1;
         }
+    }
+    
+    $scope.getText = function() {
+        $scope.phoneText = $scope.textArray[$scope.index];
     }
 });

@@ -6,8 +6,7 @@ blogSample.config(['$routeProvider',
         controller: 'mainController'
       }).
       when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'photoController'
+        templateUrl: 'views/about.html'
       }).
       otherwise({
         redirectTo: '/'
